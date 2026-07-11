@@ -1,7 +1,50 @@
 {
   "version": 1,
-  "updated": "",
-  "packages": [],
+  "updated": "2026-07-11",
+  "packages": [
+    {
+      "name": "git",
+      "cask": false,
+      "note": "imported from brew leaves",
+      "installed": "2026-07-11"
+    },
+    {
+      "name": "node",
+      "cask": false,
+      "note": "imported from brew leaves",
+      "installed": "2026-07-11"
+    },
+    {
+      "name": "openjdk@25",
+      "cask": false,
+      "note": "imported from brew leaves",
+      "installed": "2026-07-11"
+    },
+    {
+      "name": "python@3.14",
+      "cask": false,
+      "note": "imported from brew leaves",
+      "installed": "2026-07-11"
+    },
+    {
+      "name": "intellij-idea",
+      "cask": true,
+      "note": "imported from brew list --cask",
+      "installed": "2026-07-11"
+    },
+    {
+      "name": "visual-studio-code",
+      "cask": true,
+      "note": "imported from brew list --cask",
+      "installed": "2026-07-11"
+    },
+    {
+      "name": "gh",
+      "cask": false,
+      "note": "GitHub CLI, used as git credential helper",
+      "installed": "2026-07-11"
+    }
+  ],
   "env": [],
   "pathEntries": [],
   "steps": [
