@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "updated": "",
+  "packages": [],
+  "env": [],
+  "pathEntries": [],
+  "steps": [
+    {
+      "description": "Sign into Claude Code CLI: run 'claude' in a terminal and complete browser login",
+      "added": "2026-07-11"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+﻿{
+    "version":  1,
+    "updated":  "2026-07-11",
+    "packages":  [
+                     {
+                         "id":  "EclipseAdoptium.Temurin.25.JDK",
+                         "name":  "Eclipse Temurin JDK 25 (LTS)",
+                         "override":  "ADDLOCAL=FeatureMain,FeatureEnvironment,FeatureJavaHome",
+                         "note":  "Latest Java LTS; installer sets JAVA_HOME + PATH",
+                         "installed":  "2026-06-21"
+                     },
+                     {
+                         "id":  "CoreyButler.NVMforWindows",
+                         "name":  "NVM for Windows",
+                         "override":  "",
+                         "note":  "Node version manager (nvm command)",
+                         "installed":  "2026-06-21"
+                     },
+                     {
+                         "id":  "Docker.DockerDesktop",
+                         "name":  "Docker Desktop",
+                         "override":  "",
+                         "note":  "Container platform; needs WSL2 backend + reboot + first-run sign-in",
+                         "installed":  "2026-06-21"
+                     },
+                     {
+                         "id":  "Microsoft.VisualStudioCode",
+                         "name":  "Visual Studio Code",
+                         "override":  "/VERYSILENT /MERGETASKS=!runcode,addcontextmenufiles,addcontextmenufolders,addtopath",
+                         "note":  "Editor; adds \u0027code\u0027 CLI to PATH",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Google.Chrome",
+                         "name":  "Google Chrome",
+                         "override":  "",
+                         "note":  "Installed manually before recording",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Git.Git",
+                         "name":  "Git",
+                         "override":  "",
+                         "note":  "VCS; adds git to PATH",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Python.Python.3.13",
+                         "name":  "Python 3.13",
+                         "override":  "",
+                         "note":  "Python 3; py launcher + python on PATH",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "7zip.7zip",
+                         "name":  "7-Zip",
+                         "override":  "",
+                         "note":  "Archiver",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Notepad++.Notepad++",
+                         "name":  "Notepad++",
+                         "override":  "",
+                         "note":  "Text editor",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Bruno.Bruno",
+                         "name":  "Bruno",
+                         "override":  "",
+                         "note":  "API client",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "OBSProject.OBSStudio",
+                         "name":  "OBS Studio",
+                         "override":  "",
+                         "note":  "Screen recording/streaming",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Discord.Discord",
+                         "name":  "Discord",
+                         "override":  "",
+                         "note":  "Chat",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "DBeaver.DBeaver.Community",
+                         "name":  "DBeaver Community",
+                         "override":  "",
+                         "note":  "Database client (free edition)",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "JetBrains.IntelliJIDEA",
+                         "name":  "IntelliJ IDEA Ultimate",
+                         "override":  "",
+                         "note":  "JetBrains IDE (paid; 30-day trial)",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Microsoft.Teams",
+                         "name":  "Microsoft Teams",
+                         "override":  "",
+                         "note":  "Work/school Teams client",
+                         "installed":  "2026-06-28"
+                     },
+                     {
+                         "id":  "Anthropic.ClaudeCode",
+                         "name":  "Claude Code CLI",
+                         "override":  "",
+                         "note":  "terminal Claude Code; needed for /remote-control (claude rc)",
+                         "installed":  "2026-07-11"
+                     }
+                 ],
+    "env":  [
+
+            ],
+    "pathEntries":  [
+                        {
+                            "value":  "C:\\tools\\apache-maven-3.9.16\\bin",
+                            "scope":  "User"
+                        },
+                        {
+                            "value":  "C:\\tools\\gradle-9.6.1\\bin",
+                            "scope":  "User"
+                        },
+                        {
+                            "value":  "C:\\Program Files\\7-Zip",
+                            "scope":  "User"
+                        }
+                    ],
+    "steps":  [
+                  {
+                      "description":  "Install Node LTS via nvm: run \u0027nvm install lts\u0027, then in an ELEVATED shell \u0027nvm use lts\u0027 (creates the C:\\nvm4w\\nodejs symlink). Verify: node -v \u0026\u0026 npm -v",
+                      "added":  "2026-06-21"
+                  },
+                  {
+                      "description":  "Docker: ensure WSL2 is installed (\u0027wsl --install --no-distribution\u0027, elevated), REBOOT, then launch Docker Desktop, accept the license, finish first-run setup. Verify: docker run hello-world",
+                      "added":  "2026-06-21"
+                  },
+                  {
+                      "description":  "Maven 3.9.16 \u0026 Gradle 9.6.1 are NOT on winget: download apache-maven-3.9.16-bin.zip (dlcdn.apache.org/maven/maven-3) and Gradle 9.6.1 (services.gradle.org/versions/current), extract to C:\\tools, add their bin dirs to User PATH (already recorded as PATH entries). Needs JAVA_HOME set.",
+                      "added":  "2026-06-28"
+                  },
+                  {
+                      "description":  "Sign into Claude Code CLI: run \u0027claude\u0027 in a terminal and complete browser login (same account as desktop app)",
+                      "added":  "2026-07-11"
+                  }
+              ]
+}
