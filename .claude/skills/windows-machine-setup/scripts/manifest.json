@@ -166,6 +166,10 @@
                   {
                       "description":  "After Node is installed via nvm: run \u0027corepack enable\u0027 once so pnpm/yarn resolve on PATH via Node\u0027s corepack shims. Repos with a packageManager pin (e.g. UrAtlas pins pnpm@9.15.0) auto-download the right version on first use. Verify: pnpm --version",
                       "added":  "2026-07-13"
+                  },
+                  {
+                      "description":  "Set PowerShell execution policy for npm/pnpm .ps1 shims: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force",
+                      "added":  "2026-07-13"
                   }
               ]
 }
