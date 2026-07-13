@@ -1,6 +1,6 @@
 ﻿{
     "version":  1,
-    "updated":  "2026-07-11",
+    "updated":  "2026-07-13",
     "packages":  [
                      {
                          "id":  "EclipseAdoptium.Temurin.25.JDK",
@@ -113,6 +113,20 @@
                          "override":  "",
                          "note":  "terminal Claude Code; needed for /remote-control (claude rc)",
                          "installed":  "2026-07-11"
+                     },
+                     {
+                         "id":  "EclipseAdoptium.Temurin.21.JDK",
+                         "name":  "Java 21 LTS (Temurin)",
+                         "override":  "",
+                         "note":  "required by UrAtlasBrochure Gradle toolchain",
+                         "installed":  "2026-07-11"
+                     },
+                     {
+                         "id":  "GitHub.cli",
+                         "name":  "GitHub CLI",
+                         "override":  "",
+                         "note":  "PR creation from terminal",
+                         "installed":  "2026-07-12"
                      }
                  ],
     "env":  [
@@ -148,6 +162,10 @@
                   {
                       "description":  "Sign into Claude Code CLI: run \u0027claude\u0027 in a terminal and complete browser login (same account as desktop app)",
                       "added":  "2026-07-11"
+                  },
+                  {
+                      "description":  "After Node is installed via nvm: run \u0027corepack enable\u0027 once so pnpm/yarn resolve on PATH via Node\u0027s corepack shims. Repos with a packageManager pin (e.g. UrAtlas pins pnpm@9.15.0) auto-download the right version on first use. Verify: pnpm --version",
+                      "added":  "2026-07-13"
                   }
               ]
 }
