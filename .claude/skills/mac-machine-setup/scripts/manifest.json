@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-11",
+  "updated": "2026-11-01",
   "packages": [
     {
       "name": "git",
@@ -43,14 +43,124 @@
       "cask": false,
       "note": "GitHub CLI, used as git credential helper",
       "installed": "2026-07-11"
+    },
+    {
+      "name": "maven",
+      "cask": false,
+      "note": "Build tool; Windows has it as a manual zip in C:\\tools",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "gradle",
+      "cask": false,
+      "note": "Build tool; Windows has it as a manual zip in C:\\tools",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "libpq",
+      "cask": false,
+      "note": "psql client only (keg-only, on PATH via manifest), for the UrAtlas Railway Postgres; Mac equivalent of PostgreSQL 17 client",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "bun",
+      "cask": false,
+      "note": "Runtime for Routecraft / quinn-craft",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "makensis",
+      "cask": false,
+      "note": "NSIS installer builder for LANX Windows packages",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "corepack",
+      "cask": false,
+      "note": "pnpm/yarn shims; Mac equivalent of 'corepack enable' on Windows",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "go",
+      "cask": false,
+      "note": "Go toolchain for LANX project",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "openjdk@21",
+      "cask": false,
+      "note": "Java 21 LTS, required by UrAtlasBrochure Gradle toolchain",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "sevenzip",
+      "cask": false,
+      "note": "Archiver (7zz); Mac equivalent of 7-Zip",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "tailscale-app",
+      "cask": true,
+      "note": "VPN mesh networking",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "bruno",
+      "cask": true,
+      "note": "API client",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "dbeaver-community",
+      "cask": true,
+      "note": "Database client (free edition)",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "obs",
+      "cask": true,
+      "note": "Screen recording/streaming",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "discord",
+      "cask": true,
+      "note": "Chat",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "docker-desktop",
+      "cask": true,
+      "note": "Container platform; needs first-run license acceptance",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "microsoft-teams",
+      "cask": true,
+      "note": "Work/school Teams client",
+      "installed": "2026-11-01"
+    },
+    {
+      "name": "google-chrome",
+      "cask": true,
+      "note": "Browser; on the Mac it was installed manually, so brew does not manage that copy",
+      "installed": "2026-11-01"
     }
   ],
   "env": [],
-  "pathEntries": [],
+  "pathEntries": [
+    {
+      "value": "/opt/homebrew/opt/libpq/bin"
+    }
+  ],
   "steps": [
     {
       "description": "Sign into Claude Code CLI: run 'claude' in a terminal and complete browser login",
       "added": "2026-07-11"
+    },
+    {
+      "description": "Docker: launch Docker Desktop, accept the license, finish first-run setup. Verify: docker run hello-world",
+      "added": "2026-11-01"
     }
   ]
 }
