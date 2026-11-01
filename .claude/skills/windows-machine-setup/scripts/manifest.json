@@ -1,6 +1,6 @@
 ﻿{
     "version":  1,
-    "updated":  "2026-07-13",
+    "updated":  "2026-10-04",
     "packages":  [
                      {
                          "id":  "EclipseAdoptium.Temurin.25.JDK",
@@ -127,10 +127,49 @@
                          "override":  "",
                          "note":  "PR creation from terminal",
                          "installed":  "2026-07-12"
+                     },
+                     {
+                         "id":  "PostgreSQL.PostgreSQL.17",
+                         "name":  "PostgreSQL 17 (psql client only)",
+                         "override":  "--mode unattended --unattendedmodeui none --disable-components server,pgAdmin,stackbuilder --install_runtimes 0",
+                         "note":  "Command-line client for running SQL against the UrAtlas Railway Postgres; server/pgAdmin/stackbuilder components disabled",
+                         "installed":  "2026-09-12"
+                     },
+                     {
+                         "id":  "Oven-sh.Bun",
+                         "name":  "Bun",
+                         "override":  "",
+                         "note":  "Runtime for Routecraft / quinn-craft",
+                         "installed":  "2026-09-24"
+                     },
+                     {
+                         "id":  "Tailscale.Tailscale",
+                         "name":  "Tailscale",
+                         "override":  "",
+                         "note":  "VPN mesh networking",
+                         "installed":  "2026-10-04"
+                     },
+                     {
+                         "id":  "GoLang.Go",
+                         "name":  "Go",
+                         "override":  "",
+                         "note":  "Go toolchain for LANX project",
+                         "installed":  "2026-10-04"
+                     },
+                     {
+                         "id":  "NSIS.NSIS",
+                         "name":  "NSIS",
+                         "override":  "",
+                         "note":  "Installer builder for LANX Windows packages",
+                         "installed":  "2026-10-04"
                      }
                  ],
     "env":  [
-
+                {
+                    "name":  "VERA_DB",
+                    "value":  "C:\\workspace\\vera\\work\\vera.db",
+                    "scope":  "User"
+                }
             ],
     "pathEntries":  [
                         {
@@ -143,6 +182,10 @@
                         },
                         {
                             "value":  "C:\\Program Files\\7-Zip",
+                            "scope":  "User"
+                        },
+                        {
+                            "value":  "C:\\workspace\\vera\\bin",
                             "scope":  "User"
                         }
                     ],
